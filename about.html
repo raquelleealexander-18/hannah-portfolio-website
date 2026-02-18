@@ -1,215 +1,258 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <style>
-            :root {
-                --bg: #c23131f5;
-                --text-color: #ffffff;
-                --card-bg:#ca2631;
-                --accent-color: #ffd1d1;
-                --accent-color-light: #fae0e0;
-
-            }
-            body {
-                font-family: 'Aboreto', sans-serif;
-                background: var(--bg);
-                color: var(--text-color);
-                margin: 0;
-                padding: 0;
-                background-repeat: repeat;
-                background-size: 200px 200px;
-            }
-            .fun-banner {
-                width: 100%;
-                color: var(--text-color);
-                text-align: center;
-                font-family: 'Playwrite DE Grund Guides', 'Aboreto', sans-serif;
-                font-size: 70px;
-                padding: 18px 0 12px 0;
-                letter-spacing: 0.1em;
-                position: relative;
-                border-radius: 0 0 32px 32px;
-                box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-                margin-bottom: 32px;
-            }
-            .fun-banner .star {
-                color: white;
-                font-size: 60px;
-                margin: 0 18px;
-                vertical-align: middle;
-                text-shadow: 2px 2px white;
-                animation: sparkle-flicker 1.6s infinite ease-in-out;
-            }
-            @keyframes sparkle-flicker {
-                0%, 100% { opacity: 1; transform: scale(1); }
-                50% { opacity: 0.7; transform: scale(1.3); }
-            }
-            .about-card {
-                background: #a84a4a;
-                border-radius: 32px;
-                box-shadow: 0 6px 24px rgba(229, 83, 93, 0.13);
-                padding: 36px 32px 24px 32px;
-                margin: 40px auto 0 auto;
-                max-width: 540px;
-                position: relative;
-                text-align: center;
-            }
-            .about-card h1 {
-                font-family: 'Rampart One', cursive;
-                color: hsl(0, 14%, 93%);
-                font-size: 3rem;
-                margin-bottom: 18px;
-                background: none;
-            }
-            .about-card p, .about-card a {
-                font-size: 1.1rem;
-                color: #ffffff;
-                background: none;
-            }
-            .about-card a {
-                color: #faf7f7;
-                text-decoration: underline;
-                font-weight: bold;
-            }
-            .profile-img {
-                width: 140px;
-                height: 140px;
-                object-fit: cover;
-                border-radius: 50%;
-                border: 5px solid #f9c8d6;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-                margin-bottom: 18px;
-                margin-top: 8px;
-            }
-            .star-pattern {
-                margin: 24px 0 0 0;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-            .about-bg {
-                background: #be4141;
-                border-radius: 32px;
-                max-width: 900px;
-                margin: 40px auto 0 auto;
-                padding: 32px 0 32px 0;
-                box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-            }
-            /* Optionally, adjust .about-card for more contrast */
-            .about-card {
-                background: #a73e3e;
-            }
-        </style>
     <meta charset="UTF-8">
-    <title>Events - Hannah St. Clair</title>
+    <title>About - Hannah St. Clair</title>
     <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Rampart One' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Playwrite DE Grund Guides' rel='stylesheet'>
-    <style>
-        .star-pattern {
-                margin: 24px 0 0 0;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
+    <link href='https://fonts.googleapis.com/css?family=Kiwi Maru' rel='stylesheet'>
+</head>
+   <style> /* CSS styles for the portfolio page */ 
+        :root {
+            --bg: #c23131f5;
+            --text-color: #f1e9e9;
+            --card-bg:#ca2631;
+        }
         body {
             font-family: 'Aboreto', sans-serif;
-            background: #c23131f5;
-            color: #f1e9e9;
-            margin: 20px;
+            margin: 100px;
+            padding:50px;
+            background-color: var(--bg);
+            background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)), radial-gradient(2px 2px at 60px 70px, #fff, rgba(0,0,0,0)), radial-gradient(1px 1px at 50px 50px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+
+        }
+        header {
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: var(--card-bg);
+            text-align: center;
             padding: 0;
+            margin: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        .container-1 {
-            max-width: 700px;
-            margin-left: 10px;
-            margin-right: 24px;
-            margin-bottom: 60px;
-            background: #400a0af5;
-            border-radius: 20px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-            padding: 24px 18px;
-        }‰
-        .container-2 {
-            max-width: 700px;
-            margin-left: 24px;
-            margin-right: 10px;
-            margin-bottom: 60px;
-            background: #3c0707f5;
-            border-radius: 20px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-            padding: 24px 18px;
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            justify-content: center;
         }
-
         h1 {
-            font-family: 'Aboreto', sans-serif;
-            font-size: 20px;
-            margin-bottom: 20px;
             color: var(--text-color);
-            font: var(--text-color);
+            font-family: 'Rampart One', sans-serif;
+            font-size: 80px;
+            font-weight: bold;
+            text-shadow: 2px 2px #750606;
+            text-align: center;
+            padding: 10px;
+        }
 
-        }
-        h3 {    
+            .header-card {
+                  background: var(--card-bg);
+                  border-radius: 0 0 20px 20px;
+                  box-shadow: none;
+                  padding: 0px 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                  max-width: 100vw;
+                  height: 100px;
+                  margin: 0 auto;
+            }
+            .header-card img {
+                    background:none;
+                    padding: 0px;
+                    border: 0px solid #bb2754;
+                    max-width: 90px;
+                    min-width: 10px;
+                    box-shadow: 0 rgba(0,0,0,0.10);
+            }
+            .header-card h1 {
+                margin-top: 5px;
+                margin-bottom: 20px;
+                padding: 0px;
+                font-size: 60px;
+                line-height: 85px;
+                text-decoration: overline;
+                text-decoration-color: #f7b1c6f5;
+                text-decoration-thickness: 4px;
+                text-align: center;
+            }
+        h2 {
+            color: var(--text-color);
             font-family: 'Aboreto', sans-serif;
-            font-size: 15px;
-            margin-bottom: 20px;
-            margin-left: 20px;
-            color: var(--accent-color);
-        }  
-        ul {
-            font-size: 10px;
-            line-height: 1.7;
+            font-size: 28px;
+            border-width: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            margin-left: 50px;
+            border: #feadad;
+            border-style: filled;
+                padding: 10px;
+                width: fit-content;
+        }
+        p {
+            color: var(--text-color);
+            font-family: 'Kiwi Maru', serif;
+            font-size: 18px;    
+                line-height: 1.6;
+                margin-bottom: 20px;   
+                margin-left: 50px;    
+                border: 2px solid #feadad;
+                border-style: filled;
+                padding: 10px;
+                width: fit-content; 
+        }
+        p a {
+            color: var(--text-color);
+            text-decoration: none;
+            border-bottom: 2px solid #f7b1c6f5;
+            padding-bottom: 2px;    
+        }
+        p a:hover {
+            color: #e686a3f5;
+             border-bottom: 2px solid #e686a3f5;
+             padding-bottom: 2px;
+             background-color: #e686a3f5;
+             color: #ae1919;    
+        }
+        p a:visited {
             color: #f1e9e9;
+        }               
+        p a:active {
+            color: #e686a3f5;
+        }   
+        p a:highlight{
+            color: #fb6592f5;
         }
-        a {
-            color: #f7b1c6f5;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            margin-right: 0px;
         }
+        nav ul li {
+            margin-inline: 15px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Kiwi Maru', 'sans-serif';
+            font-weight: bold;
+            font-size: 12px;
+            border: 2px solid #f7b1c6f5;
+            padding: 8px 11px;
+            border-radius: 50px;
+        }
+        nav ul li a:hover {
+              background-color: #fbc8d7f5;
+              color: #420707;
+              border: 3px solid #f39bb6f5;   
+        
+        }
+        nav ul li a.active {
+                background-color: #fbc8d7f5;
+                color: #420707;
+                border: 3px solid #f39bb6f5;
+        }
+            img {
+                display:inline-block;
+                border-radius: 0px;
+                margin: 10px 0;
+                max-width: 200px;
+                min-width: 200px;
+                border: 2px solid #bb2754;
+                flex-shrink: 0;
+                justify-content: right;
+            }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px 30px;
+            margin: 100px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            margin-left: 0;
+        }
+        .card p {
+            margin-left: 0;
+            border: none;
+        }
+        
     </style>
 </head>
-<body>
- <br><h3><a href="index.html"> &#8592; Back to Home</a></h3><br>
-
-    <div class="fun-banner">
-        <span class="star">✨</span>
-        <span class="banner-title">About Hannah</span>
-        <span class="star">✨</span>
-    </div>
-    <div class="about-card">
-        <img src="image.png" alt="Hannah St. Clair" class="profile-img">
+<body> 
+    <header role="main">
+            <h3><a href="index.html" style="font-family:'Kiwi Maru','Arial Narrow', Arial, sans-serif; color:#fff8fa; position: absolute; top: 10px; left: 10px; font-size: 13px;"> &#8592; Back to Home</a></h3><br>
+            <div class="header-card">
+                <h1 role="banner"> About Hannah</h1>
+            </div>
+ <nav>
+        <ul>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="index.html#contact-information">Contact</a></li>        
+        </ul>
+    </nav> <br>
+</header>    
+    <div class="card">
         <section>
-            <h1 style="color:#ffffff; font-family:'Rampart One',cursive;">Bio</h1>
-            <p style="color:#ef8b92;">[Add a short biography about yourself, your background, and your teaching philosophy here.]</p>
-        </section>
-
-        <h1>Hannah St. Clair</h1>
-        <p>Hannah St. Clair is a passionate educator and leader, currently serving as the AE Chairperson for the National Education Association. With a commitment to fostering growth and inclusivity, Hannah has made significant contributions to her field and community.</p>
-        <p>Learn more about Hannah's <a href="education.html">education</a>, <a href="experience.html">experience</a>, and <a href="events.html">events</a> she has participated in.</p>
-        <hr style="margin:32px 0; border: none; border-top: 2px dashed #ecc1c4;">
+            <h1 style="color:#ffffff; font-size:30px; font-family:'Playwrite DE Grund Guides',cursive; text-align: left; margin-top:0px;">My Why</h1>
+            <img src="images/hannah-dancing-ellie.jpg" alt="Hannah Dancing at an NEA Conference wearing a red shirt. " style="width:30%; max-width: 800px; max-height:800px; display: block; margin: 10px 10px 10px 10px; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); float:right; margin-right: 20px;">
+            <blockquote style="color:#ffffff; font-family:'Courier',cursive;text-align: left;"> "When I was in the second grade, my parents divorced and school became my safe space. It was in that year that I decided I wanted to become a teacher. As I learned more about the injustices of the world, I foundmore reasons to become an educator. Our students deserve safe spaces to grapple with the injustices they face, and they deserve educators who also grapple with the unjust schooling system in our country. I am committed to being an educator who fights for my students and their families, and I am committed to being an educator who is always learning and growing. I am excited to continue my journey as an educator and to continue fighting for my students and their families."</blockquote>
+        <hr style="margin:32px 0; border: none; border-top: 2px dashed #ffffff;">
+                        <svg width="900" height="80" viewBox="0 0 900 80" style="display:block; margin:0 auto;">
+                            <defs>
+                                <path id="wavyPath" d="M20,60 Q120,20 220,60 T420,60 T620,60 T820,60" fill="transparent"/>
+                            </defs>
+                            <text font-family="'Londrina Shadow', cursive" font-size="28" fill="#fff8fa" letter-spacing="2">
+                                <textPath href="#wavyPath" startOffset="0%">
+                                    Alaska -> Kansas -> New York -> Oregon -> Seattle -> DC
+                                </textPath>
+                            </text>
+                        </svg>
+        <hr style="margin:32px 0; border: none; border-top: 2px dashed #ffffff;">
         <section>
-            <h2 style="color:#e48a90; font-family:'Rampart One',cursive;">Fun Facts</h2>
-            <ul style="color:#f39fa4;">
-                <li>[Add a fun fact about yourself]</li>
-                <li>[Add another fun fact]</li>
-                <li>[Add a favorite quote or hobby]</li>
+            <img src="images/hannah-protest-sign.jpg" alt="Hannah standing in front of U.S. Capital holding up a protest sign. " style="width:50%; max-width: 600px; max-height:600px; display: block; margin: 10px 10px 10px 10px; border-radius: 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.18); float:right; margin-right: 20px;">
+            <h2 style="text-align:left;color:#fdfdfd; font-size: 30px; font-family:'Playwrite DE Grund Guides',cursive;">Fun Facts</h2>
+            <ul style="text-align:left; color:#f9f8f8; font-size: 15px;font-family:'Courier',cursive;">
+                <li>I worked at a Smoke House in Alaska during the summers growing up.</li>
+                <li>I have a cat named Flapjack.</li>
+                <li>I can do the splits.</li>
             </ul>
         </section>
         <section>
-            <h2 style="color:#e5535d; font-family:'Rampart One',cursive;">Mission Statement</h2>
-            <p style="color:#d07d83;">[Share your mission as an educator and what drives you to teach.]</p>
+            <h2 style="color:#ffffff; text-align: left; font-size: 30px; margin-top:10px; font-family:'Playwrite DE Grund Guides',cursive;">Mission Statement</h2>
+            <p style="text-align: left; color:#ffffff; font-size: 15px; font-family:'Courier',cursive; "> Without high quality educators, who are supported and respected, our students do not receive the education they deserve.</p>
         </section>
-        <div class="star-pattern">
-            <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                    <path d="M20 10 L23 18 L32 18 L25 23 L27 32 L20 27 L13 32 L15 23 L8 18 L17 18 Z" fill="#fff8fa" stroke="#e5535d" stroke-width="2"/>
-                    <path d="M60 10 L63 18 L72 18 L65 23 L67 32 L60 27 L53 32 L55 23 L48 18 L57 18 Z" fill="#fbcfcf" stroke="#e5535d" stroke-width="2"/>
-                    <path d="M100 10 L103 18 L112 18 L105 23 L107 32 L100 27 L93 32 L95 23 L88 18 L97 18 Z" fill="#e5535d" stroke="#fff8fa" stroke-width="2"/>
-                    <path d="M140 10 L143 18 L152 18 L145 23 L147 32 L140 27 L133 32 L135 23 L128 18 L137 18 Z" fill="#fbcfcf" stroke="#e5535d" stroke-width="2"/>
-                    <path d="M180 10 L183 18 L192 18 L185 23 L187 32 L180 27 L173 32 L175 23 L168 18 L177 18 Z" fill="#e5535d" stroke="#fff8fa" stroke-width="2"/>
-                </g>
-            </svg>
-        </div>
+         <div class="pattern" style="margin-top: 24px; width: 100%; display: flex; justify-content: center;">
+                <svg width="220" height="44" viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path d="M20 10 L23 18 L32 18 L25 23 L27 32 L20 27 L13 32 L15 23 L8 18 L17 18 Z" fill="#fff8fa" stroke="#e5535d" stroke-width="2"/>
+                        <path d="M60 10 L63 18 L72 18 L65 23 L67 32 L60 27 L53 32 L55 23 L48 18 L57 18 Z" fill="#fbcfcf" stroke="#e5535d" stroke-width="2"/>
+                        <path d="M100 10 L103 18 L112 18 L105 23 L107 32 L100 27 L93 32 L95 23 L88 18 L97 18 Z" fill="#e5535d" stroke="#fff8fa" stroke-width="2"/>
+                        <path d="M140 10 L143 18 L152 18 L145 23 L147 32 L140 27 L133 32 L135 23 L128 18 L137 18 Z" fill="#fbcfcf" stroke="#e5535d" stroke-width="2"/>
+                        <path d="M180 10 L183 18 L192 18 L185 23 L187 32 L180 27 L173 32 L175 23 L168 18 L177 18 Z" fill="#e5535d" stroke="#fff8fa" stroke-width="2"/>
+                    </g>
+                </svg>
+            </div>
     </div>
     <div style="text-align:center; margin-top:32px;">
-        <a href="index.html" style="color:#fff8fa; font-size:1.1rem; text-decoration:underline;">&#8592; Back to Home</a>
     </div>
 </body>
 </html>
